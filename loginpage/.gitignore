@@ -5,7 +5,4 @@ node_modules/
 .env
 
 
-# Build folders
-dist/
-build/
 
