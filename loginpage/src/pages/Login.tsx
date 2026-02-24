@@ -37,7 +37,7 @@ const LoginPage = () => {
     localStorage.setItem("username", data.username);
     localStorage.setItem("password", data.password);
 
-    // alert("Login data saved in localStorage");
+    alert("Login data saved in localStorage");
     reset();
     navigate("/");
   };
