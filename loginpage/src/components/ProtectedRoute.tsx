@@ -1,19 +1,29 @@
-import { Navigate, Outlet, useLocation } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useEffect } from "react";
+import {  useNavigate } from "react-router-dom";
+// import { Navigate, Outlet, useLocation, useNavigate } from "react-router-dom";
+// import { useAuth } from "../context/AuthContext";
 
 /**
  * Protects routes: redirects to /login if not authenticated.
  * After login, redirects back to the intended page (or home).
  */
-const ProtectedRoute = () => {
-  const { isAuthenticated } = useAuth();
-  const location = useLocation();
+const ProtectedRoute = ({children}: { children: React.ReactNode }) => {
 
-  if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
-  }
+  const isAuthenticated = false;
 
-  return <Outlet />;
+  const navigate = useNavigate();
+
+  // const { isAuthenticated } = useAuth();
+  // const location = useLocation();
+
+
+    useEffect(() =>{
+      if (!isAuthenticated)  navigate('/login') 
+    },[])
+
+  return (
+   children 
+  )
 };
 
 export default ProtectedRoute;
