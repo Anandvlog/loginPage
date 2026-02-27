@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+// import { useAuth } from "../context/AuthContext";
 
 
 
@@ -23,7 +23,7 @@ type LoginFormData = yup.InferType<typeof loginSchema>;
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const { login } = useAuth();
+  // const { login } = useAuth();
   const {
     register,
     handleSubmit,
@@ -36,7 +36,7 @@ const LoginPage = () => {
 
   const onSubmit = (data: LoginFormData) => {
     localStorage.setItem("password", data.password);
-    login(data.username);
+    // login(data.username);
     alert("Login successful");
     reset();
     navigate("/", { replace: true });
