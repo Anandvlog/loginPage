@@ -29,14 +29,15 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm<LoginFormData>({
     resolver: yupResolver(loginSchema),
-    mode: "all"
+    mode: "all",
   });
 
-  const onSubmit = () => {
+  const onSubmit = (data: LoginFormData) => {
     // In a real app you’d verify credentials here.
     // For now, treat any valid form submission as “logged in”.
     localStorage.setItem("auth", "true");
-    alert("Login successful");
+    localStorage.setItem("username", data.username);
+    alert(`Welcome, ${data.username}`);
     reset();
     navigate("/");
   };
