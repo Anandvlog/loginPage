@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
 const Home = () => {
-  return (
-    <h1 className='text-red-500 '>Welcome to Dashboard</h1>
-  )
-}
+  const username =
+    typeof window !== "undefined" ? localStorage.getItem("username") : null;
 
-export default Home
+  return (
+    <div>
+      <h1 className="text-red-500">
+        {username ? `Welcome to Dashboard, ${username}` : "Welcome to Dashboard"}
+      </h1>
+    </div>
+  );
+};
+
+export default Home;
