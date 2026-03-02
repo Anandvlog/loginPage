@@ -5,8 +5,7 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const username =
-    typeof window !== "undefined" ? localStorage.getItem("username") : null;
+ 
 
   const handleLogout = () => {
     if (typeof window !== "undefined") {
@@ -24,9 +23,7 @@ const Header = () => {
             Home
           </Link>
         </h1>
-        {username && (
-          <p className="text-sm text-blue-100">Logged in as {username}</p>
-        )}
+       
       </div>
       {location.pathname === "/" && (
         <button

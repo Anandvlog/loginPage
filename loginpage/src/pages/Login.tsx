@@ -41,8 +41,6 @@ const LoginPage = () => {
   });
 
   const onSubmit = (data: LoginFormData) => {
-    // In a real app you’d verify credentials here.
-    // For now, treat any valid form submission as “logged in”.
     localStorage.setItem("auth", "true");
     localStorage.setItem("username", data.username);
     alert(`Welcome, ${data.username}`);
