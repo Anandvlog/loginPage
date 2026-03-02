@@ -2,7 +2,7 @@ import CommonInput from "../components/commonInput";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
@@ -94,10 +94,16 @@ const LoginPage = () => {
 
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition cursor-pointer"
-        >
+          className="pb-2 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition cursor-pointer"
+          >
           Submit
         </button>
+          <div>
+            <p>Don't have an account? 
+            <Link className="hover:underline" to="/registration">Sign up </Link>
+
+            </p>
+          </div>
       </form>
     </div>
   );

@@ -136,7 +136,7 @@ const RegistrationFormPages = () => {
           {/* Button */}
           <button
             type="submit"
-            className="w-full py-2 rounded-lg bg-white text-indigo-600 font-semibold hover:bg-gray-200 transition"
+            className="w-full py-2 rounded-lg bg-white text-indigo-600 font-semibold hover:bg-gray-200 transition cursor-pointer"
           >
             Register
           </button>
