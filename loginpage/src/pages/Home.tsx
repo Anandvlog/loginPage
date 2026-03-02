@@ -39,27 +39,6 @@ const Home = () => {
               </div>
             );
           })}
-
-          {/* <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
-            <img
-              src="https://picsum.photos/600/400?random=2"
-              alt="Card Image"
-              className="w-full h-52 object-cover"
-            />
-
-            <div className="p-5">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                Beach Sunset
-              </h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Enjoy golden sunset moments with relaxing ocean waves.
-              </p>
-
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-                Read More
-              </button>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>
