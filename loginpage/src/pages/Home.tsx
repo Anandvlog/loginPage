@@ -1,7 +1,9 @@
 import React from "react";
 import demoData from "../json/data.json";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const username =
     typeof window !== "undefined" ? localStorage.getItem("username") : null;
 
@@ -32,7 +34,10 @@ const Home = () => {
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">{item.desc}</p>
 
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                  <button
+                    onClick={() => navigate(`/details/${item.id}`)}
+                    className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+                  >
                     Read More
                   </button>
                 </div>
