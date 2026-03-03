@@ -5,6 +5,7 @@ import LoginPage from "./pages/Login";
 import RegistrationFormPages from "./pages/RegistrationForm";
 import Layout from "./components/layout";
 import ProtectedRoute from "./components/ProtectedRoute";
+import DetailsPage from "./pages/Details";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route path="/details/:id" element={<DetailsPage />} />
         <Route path="*" element={<h1>Page Not Found!</h1>} />
       </Route>
     </Routes>
