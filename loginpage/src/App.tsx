@@ -11,6 +11,7 @@ const App = () => {
     <Routes>
       <Route element={<Layout />}>
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/registration" element={<RegistrationFormPages />} />
         <Route
           path="/"
           element={
@@ -19,7 +20,6 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-        <Route path="/registration" element={<RegistrationFormPages />} />
         <Route path="*" element={<h1>Page Not Found!</h1>} />
       </Route>
     </Routes>
